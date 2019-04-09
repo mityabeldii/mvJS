@@ -14,18 +14,18 @@ let screens = [
 ]
 
 let App = () => {
+    let [currentScreen, setCurrentScreen] = useState(0)
     return (
         <Wrapper>
             <Header>
+                <MenuItem>{currentScreen}</MenuItem>
                 {
                     screens.map((i, index) => {
                         return (
                             <MenuItem
                                 key={index}
                                 color={i.color}
-                                onClick={() => {
-
-                                }}
+                                onClick={() => { setCurrentScreen(index) }}
                             >
                                 {i.name}
                             </MenuItem>
