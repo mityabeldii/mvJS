@@ -44,17 +44,17 @@ let Element = styled.div`
 
 ### Применяем компонент со стилем в JSX:
 ```js
-let element = <Element/>
+let block = <Element/>
 ```
 
 # Параметры
 Основная фишка styled-components заключается в том, что в стили можно передавать параметры как JS код передается в шаблонную строку:
 ```js
-let element = <Element background={`white`} />
+let block = <Element value={`white`} />
 
 let Element = styled.div`
   width: 100vw;
   height: 100vh;
-  background-color: ${props => props.background};
+  background-color: ${props => props.value};
 `
 ```
