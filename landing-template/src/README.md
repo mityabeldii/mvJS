@@ -1,4 +1,4 @@
-# Знакомство с библиотекой styled-component
+# Знакомство с библиотекой styled-components
 
 Источник: https://www.styled-components.com/
 
@@ -19,11 +19,11 @@ let a = 2,
 
 ## Начнем
 
-JSX позволяет совмещать HTML и JS в одном JSX(JS) файле, а библиотека styled-component позволяет добавлять туда еще и CSS.
+JSX позволяет совмещать HTML и JS в одном JSX(JS) файле, а библиотека styled-components позволяет добавлять туда еще и CSS.
 
 Нам для работы нужен элемент ```styled``` из этой библиотеки. Импортируем в начале файла:
 ```js
-import styled from 'styled-component'
+import styled from 'styled-components'
 ```
 
 Применение простое:
