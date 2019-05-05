@@ -2,16 +2,14 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import useScroller from './useScroller'
+import array from './first'
 
-let array = [0, 1, 2]
+// let array = [`red`, `green`, `blue`]
 
 let App = () => {
     let [currentScreen, scrollTo, Scroller] = useScroller()
-    console.log(currentScreen); // currentScreen - хранит номер текущего экрана
-    console.log(scrollTo); // scrollTo(number) - функция, которая подскролливает к экрану с номером number
-    console.log(Scroller); // Scroller - сам компонент скорллера, в который внутрь вставляем все экраны
     return <Wrapper>
-        <Header>
+        <Header visible={currentScreen > 0} >
             {
                 array.map((item, index) => {
                     return (
@@ -24,7 +22,7 @@ let App = () => {
             {
                 array.map((item, index) => {
                     return (
-                        <Block key={index}>{index}</Block>
+                        <Block color={item} key={index}>{item}</Block>
                     )
                 })
             }
@@ -51,6 +49,7 @@ height: 8vh;
 position: fixed;
 top: 0;
 transition: 0.2s;
+visibility: ${props => props.visible ? `visible`: `hidden`};
 @media (min-width: 320px) and (max-width: 480px) {
     
 }`
@@ -63,6 +62,7 @@ flex-direction: column
 transition: 0.2s
 width: 100vw;
 height: 100vh;
+background-color: ${props => props.color};
 @media (min-width: 320px) and (max-width: 480px) {
     
 }`

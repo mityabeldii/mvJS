@@ -5,7 +5,7 @@ import { scroller, Link } from 'react-scroll'
 let useScroller = () => {
     let [currentScreen, setCurrentScreen] = useState(0)
     let scrollTo = (number) => {
-        scroller.scrollTo(`test${number}`, { duration: 200, smooth: 'easeInOutQuart' })
+        scroller.scrollTo(`test${number}`, { duration: 1000, smooth: 'easeInOutQuart' })
     }
     let element = (props) => (
         <div id={`wrapper`} >
