@@ -41,9 +41,9 @@ height: 100vh;
 
 const Header = styled.div`
 display: flex
-justify-content: space-around
-align-items: center
-flex-direction: row
+justify-content: space-around;
+align-items: center;
+flex-direction: row;
 width: 100vw;
 height: 8vh;
 position: fixed;
@@ -56,10 +56,10 @@ visibility: ${props => props.visible ? `visible`: `hidden`};
 
 const Block = styled.div`
 display: flex
-justify-content: center
-align-items: center
-flex-direction: column
-transition: 0.2s
+justify-content: center;
+align-items: center;
+flex-direction: column;
+transition: 0.2s;
 width: 100vw;
 height: 100vh;
 background-color: ${props => props.color};

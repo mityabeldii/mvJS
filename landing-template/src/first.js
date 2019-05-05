@@ -1,11 +1,16 @@
 import React from 'react'
 import styled from "styled-components";
 
-let RectangleBlockFirst = () => <RectangleBlock bgColorStyle={`purple`} />
-let RectangleBlockSecond = () => <RectangleBlock bgColorStyle={`marine`} />
-let RectangleBlockThird = () => <RectangleBlock bgColorStyle={`dark-blue`} />
+const ParagInside = () => <p>wefwefwefwef</p>
 
-const RectangleBlock = styled.div`
+const RectangleBlockFirst = () => <RectangleBlock bgColorStyle = {`purple`}>
+<ParagInside/>
+</RectangleBlock>
+const RectangleBlockSecond = () => < RectangleBlock bgColorStyle = {`green`}/>
+const RectangleBlockThird = () => < RectangleBlock bgColorStyle = {`blue`}/>
+
+
+const RectangleBlock = styled.section `
     width: 100vw;
     height: 100vh;
     background-color: ${props => props.bgColorStyle}
