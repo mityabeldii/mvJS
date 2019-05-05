@@ -11,5 +11,4 @@ const RectangleBlock = styled.div`
     background-color: ${props => props.bgColorStyle}
 `;
 
-const array_rectangle = [RectangleBlockFirst, RectangleBlockSecond, RectangleBlockThird];
-export default array_rectangle;
+export default [RectangleBlockFirst, RectangleBlockSecond, RectangleBlockThird];
