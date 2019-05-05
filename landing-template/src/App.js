@@ -22,7 +22,7 @@ let App = () => {
             {
                 array.map((item, index) => {
                     return (
-                        <Block color={item} key={index}>{item}</Block>
+                        <div key={index}>{item()}</div>
                     )
                 })
             }
