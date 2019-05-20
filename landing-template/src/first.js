@@ -1,43 +1,39 @@
 import React from 'react'
-import styled from "styled-components";
+import * as LayoutStyle from "./styled-components/LayoutStyle"
+import * as PageFirstStyle from "./styled-components/PageFirstStyle"
+import * as PageSecondStyle from "./styled-components/PageSecondStyle"
+import * as PageThirdStyle from "./styled-components/PageThirdStyle"
+import * as PageFourthStyle from "./styled-components/PageFourthStyle"
 
-const TryToday = () => <p>Попробуйте сегодня</p>;
+// first page
+const PageFirst = () => <LayoutStyle.RectangleBlock bgColorStyle = {`purple`} />;
 
-const RectangleBlockFirst = () => <RectangleBlock bgColorStyle = {`purple`} />;
-const RectangleBlockSecond = () => < RectangleBlock bgColorStyle = {`green`}>
-    <WrapLevelOne heightStyle = {`70%`} borderColor = {`yellow`}/>
-    <WrapLevelOne heightStyle = {`30%`} borderColor = {`red`}>
-        <WrapLevelTwo widthStyle = {`50%`}>
-        <TryToday/>
-        </WrapLevelTwo>
-        <WrapLevelTwo widthStyle = {`30%`}/>
-        <WrapLevelTwo widthStyle = {`20%`}/>
-    </WrapLevelOne>
-</RectangleBlock>
-const RectangleBlockThird = () => < RectangleBlock bgColorStyle = {`blue`}/>
+// second page
+const PageSecond = () => <LayoutStyle.RectangleBlock bgColorStyle = {`green`}>
+    <PageSecondStyle.WrapLevelOne heightStyle = {`70%`} borderColor = {`yellow`}/>
+    <PageSecondStyle.WrapLevelOne heightStyle = {`30%`} borderColor = {`red`}>
+        <PageSecondStyle.WrapLevelTwo widthStyle = {`50%`}>
+            <p>Попробуйте сегодня</p>
+        </PageSecondStyle.WrapLevelTwo>
+        <PageSecondStyle.WrapLevelTwo widthStyle = {`30%`}/>
+        <PageSecondStyle.WrapLevelTwo widthStyle = {`20%`}/>
+    </PageSecondStyle.WrapLevelOne>
+</LayoutStyle.RectangleBlock>
 
+// third page
+const PageThird = () => <LayoutStyle.RectangleBlock bgColorStyle = {`blue`}>
+    <PageThirdStyle.WrapVideo />
+    <PageThirdStyle.WrapTourWatch />
+</LayoutStyle.RectangleBlock>
 
-const RectangleBlock = styled.section `
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: ${props => props.bgColorStyle}
-`;
+// fourth page
+const PageFourth = () => <LayoutStyle.RectangleBlock bgColorStyle = {`green`}>
+    <PageFourthStyle.WrapContacts />
+    <PageFourthStyle.WrapFooter>
+    <PageFourthStyle.FooterFirstLine>
+        <p>Текст футера 1</p>
+    </PageFourthStyle.FooterFirstLine>
+    </PageFourthStyle.WrapFooter>
+</LayoutStyle.RectangleBlock>
 
-const WrapLevelOne = styled.section `
-    display: flex;
-    width: 95%;
-    height: ${props => props.heightStyle};
-    border: 1px solid ${props => props.borderColor};;
-`;
-
-const WrapLevelTwo = styled.div `
-    display: flex;
-    width: ${props => props.widthStyle};
-    height: 100%;
-    border: 1px solid blue;
-`;
-
-export default [RectangleBlockFirst, RectangleBlockSecond, RectangleBlockThird];
+export default [PageFirst, PageSecond, PageThird, PageFourth];
