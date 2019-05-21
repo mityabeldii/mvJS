@@ -3,27 +3,28 @@ import React, { useState, useEffect } from 'react'
 import useScroller from './useScroller'
 
 import * as LayoutStyle from "./styled-components/LayoutStyle"
-import array from './first'
-
-// let array = [`red`, `green`, `blue`]
+import array from './screens'
 
 let App = () => {
     let [currentScreen, scrollTo, Scroller] = useScroller()
+    let getIndexByName = (name) => array.map(i => i.name).indexOf(name)
     return <LayoutStyle.Wrapper>
         <LayoutStyle.Header visible={currentScreen > 0} >
             {
                 array.map((item, index) => {
                     return (
-                        <div key={index} onClick={() => { scrollTo(index) }} >screen {index}</div>
+                        <div key={index} onClick={() => { scrollTo(index) }} >{item.name}</div>
                     )
                 })
             }
         </LayoutStyle.Header>
         <Scroller>
             {
-                array.map((item, index) => {
+                array.map((Item, index) => {
                     return (
-                        <div key={index}>{item()}</div>
+                        <div key={index}>
+                            <Item.component scrollTo={(index) => { scrollTo(getIndexByName(Item.name)) }} />
+                        </div>
                     )
                 })
             }

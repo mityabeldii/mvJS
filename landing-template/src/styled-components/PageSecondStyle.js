@@ -1,7 +1,8 @@
+/*eslint-disable no-unused-vars*/
 import styled from "styled-components";
 // import * as Variables from "./styled-components/VariableStyle";
 
-export const WrapLevelOne = styled.section `
+export const WrapLevelOne = styled.section`
     display: flex;
     width: 95%;
     height: ${props => props.heightStyle};
@@ -10,7 +11,7 @@ export const WrapLevelOne = styled.section `
             
         }`;
 
-export const WrapLevelTwo = styled.div `
+export const WrapLevelTwo = styled.div`
     display: flex;
     width: ${props => props.widthStyle};
     height: 100%;
@@ -23,3 +24,4 @@ export const WrapLevelTwo = styled.div `
     @media (min-width: 320px) and (max-width: 768px) {
             
         }`;
+/*eslint-enable no-unused-vars*/

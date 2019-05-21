@@ -1,3 +1,4 @@
+/*eslint-disable no-unused-vars*/
 import styled from "styled-components";
 // import * as Variables from "./styled-components/VariableStyle";
 
@@ -19,3 +20,4 @@ export const WrapTourWatch = styled.div `
     @media (min-width: 320px) and (max-width: 768px) {
             
         }`;
+/*eslint-enable no-unused-vars*/

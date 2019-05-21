@@ -1,3 +1,4 @@
+/*eslint-disable no-unused-vars*/
 import styled from "styled-components";
 
 export const Wrapper = styled.section`
@@ -45,3 +46,4 @@ export const RectangleBlock = styled.section `
     @media (min-width: 320px) and (max-width: 768px) {
             
         }`;
+/*eslint-enable no-unused-vars*/
