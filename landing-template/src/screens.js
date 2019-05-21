@@ -1,83 +1,89 @@
 /*eslint-disable no-unused-vars*/
 import React from 'react'
 import * as LayoutStyle from "./styled-components/LayoutStyle"
-import * as PageFirstStyle from "./styled-components/PageFirstStyle"
-import * as PageSecondStyle from "./styled-components/PageSecondStyle"
-import * as PageThirdStyle from "./styled-components/PageThirdStyle"
-import * as PageFourthStyle from "./styled-components/PageFourthStyle"
+import * as PageEntryStyle from "./styled-components/PageEntryStyle"
+import * as PagePhotoStyle from "./styled-components/PagePhotoStyle"
+import * as PageVideoStyle from "./styled-components/PageVideoStyle"
+import * as PageContactStyle from "./styled-components/PageContactStyle"
 
 // first page
-const PageFirst = (props) => {
+const PageEntry = (props) => {
     return (
-        <LayoutStyle.RectangleBlock bgColorStyle={`purple`} />
+        <LayoutStyle.RectangleBlock bgColorStyle={`purple`}>
+            <PageEntryStyle.EntryWrap>
+                <PageEntryStyle.EntryBlock/>
+                <PageEntryStyle.EntryBlock/>
+            </PageEntryStyle.EntryWrap>
+        </LayoutStyle.RectangleBlock>
     )
 };
 
 // second page
-const PageSecond = (props) => <LayoutStyle.RectangleBlock bgColorStyle={`green`}>
-    <PageSecondStyle.WrapLevelOne heightStyle={`70%`} borderColor={`yellow`} />
-    <PageSecondStyle.WrapLevelOne heightStyle={`30%`} borderColor={`red`}>
-        <PageSecondStyle.WrapLevelTwo widthStyle={`50%`}>
+const PagePhoto = (props) => <LayoutStyle.RectangleBlock bgColorStyle={`green`}>
+    <PagePhotoStyle.WrapLevelOne heightStyle={`70%`} borderColor={`yellow`} />
+    <PagePhotoStyle.WrapLevelOne heightStyle={`30%`} borderColor={`red`}>
+        <PagePhotoStyle.WrapLevelTwo widthStyle={`50%`}>
             <p>Попробуйте сегодня</p>
-        </PageSecondStyle.WrapLevelTwo>
-        <PageSecondStyle.WrapLevelTwo widthStyle={`30%`} />
-        <PageSecondStyle.WrapLevelTwo widthStyle={`20%`} />
-    </PageSecondStyle.WrapLevelOne>
+        </PagePhotoStyle.WrapLevelTwo>
+        <PagePhotoStyle.WrapLevelTwo widthStyle={`30%`} />
+        <PagePhotoStyle.WrapLevelTwo widthStyle={`20%`} />
+    </PagePhotoStyle.WrapLevelOne>
 </LayoutStyle.RectangleBlock>
 
 // third page
-const PageThird = (props) => <LayoutStyle.RectangleBlock bgColorStyle={`blue`}>
-    <PageThirdStyle.WrapVideo />
-    <PageThirdStyle.WrapTourWatch />
+const PageVideo = (props) => <LayoutStyle.RectangleBlock bgColorStyle={`blue`}>
+    <PageVideoStyle.WrapVideo />
+    <PageVideoStyle.WrapTourWatch />
 </LayoutStyle.RectangleBlock>
 
 // fourth page
-const PageFourth = (props) => <LayoutStyle.RectangleBlock bgColorStyle={`green`}>
-    <PageFourthStyle.WrapContacts />
-    <PageFourthStyle.WrapFooter>
-        <PageFourthStyle.FooterFirstLine>
+const PageContact = (props) => <LayoutStyle.RectangleBlock bgColorStyle={`green`}>
+    <PageContactStyle.WrapContacts />
+    <PageContactStyle.WrapFooter>
+        <PageContactStyle.FooterFirstLine>
             <p>Текст футера 1</p>
-        </PageFourthStyle.FooterFirstLine>
-    </PageFourthStyle.WrapFooter>
+        </PageContactStyle.FooterFirstLine>
+    </PageContactStyle.WrapFooter>
 </LayoutStyle.RectangleBlock>
 
 let array_to_export = [
     {
-        component: PageFirst,
-        name: `entry`,
+        component: PageEntry,
+        name: `entry`
     },
     {
-        component: PageSecond,
-        name: `photo_page`,
+        component: PagePhoto,
+        name: `photo_page`
     },
     {
-        component: PageThird,
-        name: `video_page`,
+        component: PageVideo,
+        name: `video_page`
     },
     // {
-    //     component: null,
-    //     name: `children_programms`,
+    //     component: PageChildProgram,
+    //     name: `children_programms`
     // },
     // {
-    //     component: null,
-    //     name: `adults_programms`,
+    //     component: PageAdultdProgram,
+    //     name: `adults_programms`
     // },
     // {
-    //     component: null,
-    //     name: `schedule`,
+    //     component: PageSchedule,
+    //     name: `schedule`
     // },
     // {
-    //     component: null,
-    //     name: `team`,
+    //     component: PageTeam,
+    //     name: `team`
     // },
     // {
-    //     component: null,
-    //     name: `price`,
+    //     component: PagePrice,
+    //     name: `price`
     // },
     {
-        component: PageFourth,
-        name: `contacts`,
-    }]
+        component: PageContact,
+        name: `contacts`
+    }
+]
 
 export default array_to_export;
 /*eslint-enable no-unused-vars*/
