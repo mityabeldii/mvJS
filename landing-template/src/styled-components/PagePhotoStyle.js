@@ -14,9 +14,11 @@ export const WrapLevelOne = styled.section`
 export const WrapLevelTwo = styled.div`
     display: flex;
     width: ${props => props.widthStyle};
-    height: 100%;
-    border: 1px solid blue;
+    height: auto;
+    margin: 10px;
+    background-color: rgba(255,255,255,0.5);
     p {
+        width: 100%;
         font-size: 3rem;
         text-align: center;
         color: blue;

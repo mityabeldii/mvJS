@@ -16,7 +16,7 @@ export const WrapTourWatch = styled.div `
     display: flex;
     width: 100%;
     height: 20%;
-    border: 1px solid yellow;
+    background-color: rgba(255,255,255,0.5);
     @media (min-width: 320px) and (max-width: 768px) {
             
         }`;

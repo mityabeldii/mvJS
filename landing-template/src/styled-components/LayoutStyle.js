@@ -19,6 +19,7 @@ export const Header = styled.div`
     top: 0;
     transition: 0.2s;
     visibility: ${props => props.visible ? `visible`: `hidden`};
+    background-color: rgba(255,255,255,0.5);
         @media (min-width: 320px) and (max-width: 480px) {
             
         }`;
@@ -42,6 +43,8 @@ export const RectangleBlock = styled.section `
     align-items: center;
     width: 100vw;
     height: 100vh;
+    margin: 0;
+    padding: 0;
     background-color: ${props => props.bgColorStyle};
     @media (min-width: 320px) and (max-width: 768px) {
             

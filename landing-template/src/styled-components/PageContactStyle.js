@@ -16,7 +16,7 @@ export const WrapFooter = styled.footer`
     display: flex;
     width: 100%;
     height: 30%;
-    background-color: #000;
+    background-color: rgba(0,0,0,0.5);
     @media (min-width: 320px) and (max-width: 768px) {
             
         }`;

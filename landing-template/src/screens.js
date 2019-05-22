@@ -1,25 +1,57 @@
 /*eslint-disable no-unused-vars*/
-import React from 'react'
-import * as LayoutStyle from "./styled-components/LayoutStyle"
-import * as PageEntryStyle from "./styled-components/PageEntryStyle"
-import * as PagePhotoStyle from "./styled-components/PagePhotoStyle"
-import * as PageVideoStyle from "./styled-components/PageVideoStyle"
-import * as PageContactStyle from "./styled-components/PageContactStyle"
+import React from 'react';
+import * as LayoutStyle from "./styled-components/LayoutStyle";
+import * as PageEntryStyle from "./styled-components/PageEntryStyle";
+import * as PagePhotoStyle from "./styled-components/PagePhotoStyle";
+import * as PageVideoStyle from "./styled-components/PageVideoStyle";
+import * as PageScheduleStyle from "./styled-components/PageScheduleStyle";
+import * as PageContactStyle from "./styled-components/PageContactStyle";
 
-// first page
+// 1 page - ENTRY
 const PageEntry = (props) => {
     return (
-        <LayoutStyle.RectangleBlock bgColorStyle={`purple`}>
+        <LayoutStyle.RectangleBlock bgColorStyle={`rgba(255,0,255,0.5)`}>
+
             <PageEntryStyle.EntryWrap>
-                <PageEntryStyle.EntryBlock/>
-                <PageEntryStyle.EntryBlock/>
+
+                <PageEntryStyle.EntryBlock>
+
+                    <PageEntryStyle.EntryLogo/>
+                    
+                    <PageEntryStyle.EntryExerciseWrap>
+                        <PageEntryStyle.EntryExercise>
+
+                        </PageEntryStyle.EntryExercise>
+
+                        <PageEntryStyle.EntryKnowMore>
+
+                        </PageEntryStyle.EntryKnowMore>
+                    </PageEntryStyle.EntryExerciseWrap>
+
+                </PageEntryStyle.EntryBlock>
+
+                <PageEntryStyle.EntryBlock>
+
+                    <PageEntryStyle.EntryCall/>
+                    <PageEntryStyle.EntryExerciseWrap>
+                        <PageEntryStyle.EntryExercise>
+
+                        </PageEntryStyle.EntryExercise>
+                        <PageEntryStyle.EntryKnowMore>
+
+                        </PageEntryStyle.EntryKnowMore>
+                    </PageEntryStyle.EntryExerciseWrap>
+
+                </PageEntryStyle.EntryBlock>
+
             </PageEntryStyle.EntryWrap>
+
         </LayoutStyle.RectangleBlock>
     )
 };
 
-// second page
-const PagePhoto = (props) => <LayoutStyle.RectangleBlock bgColorStyle={`green`}>
+// 2 page - PHOTO
+const PagePhoto = (props) => <LayoutStyle.RectangleBlock bgColorStyle={`rgba(0,255,255,0.25)`}>
     <PagePhotoStyle.WrapLevelOne heightStyle={`70%`} borderColor={`yellow`} />
     <PagePhotoStyle.WrapLevelOne heightStyle={`30%`} borderColor={`red`}>
         <PagePhotoStyle.WrapLevelTwo widthStyle={`50%`}>
@@ -30,14 +62,32 @@ const PagePhoto = (props) => <LayoutStyle.RectangleBlock bgColorStyle={`green`}>
     </PagePhotoStyle.WrapLevelOne>
 </LayoutStyle.RectangleBlock>
 
-// third page
-const PageVideo = (props) => <LayoutStyle.RectangleBlock bgColorStyle={`blue`}>
+// 3 page - VIDEO
+const PageVideo = (props) => <LayoutStyle.RectangleBlock bgColorStyle={`rgba(0,255,0,0.5)`}>
     <PageVideoStyle.WrapVideo />
     <PageVideoStyle.WrapTourWatch />
 </LayoutStyle.RectangleBlock>
 
-// fourth page
-const PageContact = (props) => <LayoutStyle.RectangleBlock bgColorStyle={`green`}>
+// 6 page - Schedule
+const week = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+// let weekDay = week.map((i) => 
+//     return { <PageScheduleStyle.ScheduleTableHeadItem><p>day</p></PageScheduleStyle.ScheduleTableHeadItem>}
+// );
+
+const PageSchedule = (props) => <LayoutStyle.RectangleBlock bgColorStyle={`rgba(0,0,255,0.5)`}>
+    <PageScheduleStyle.WrapScheduleTable>
+        <p>расписание</p>
+        <PageScheduleStyle.ScheduleTableHead>
+                    
+        </PageScheduleStyle.ScheduleTableHead>
+        <PageScheduleStyle.ScheduleTable>
+            
+        </PageScheduleStyle.ScheduleTable>
+    </PageScheduleStyle.WrapScheduleTable>
+</LayoutStyle.RectangleBlock>
+
+// 8 page - CONTACTS
+const PageContact = (props) => <LayoutStyle.RectangleBlock bgColorStyle={`rgba(255,0,0,0.5)`}>
     <PageContactStyle.WrapContacts />
     <PageContactStyle.WrapFooter>
         <PageContactStyle.FooterFirstLine>
@@ -67,10 +117,10 @@ let array_to_export = [
     //     component: PageAdultdProgram,
     //     name: `adults_programms`
     // },
-    // {
-    //     component: PageSchedule,
-    //     name: `schedule`
-    // },
+    {
+        component: PageSchedule,
+        name: `schedule`
+    },
     // {
     //     component: PageTeam,
     //     name: `team`
