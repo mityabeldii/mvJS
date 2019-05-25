@@ -1,6 +1,6 @@
 /*eslint-disable no-unused-vars*/
 import styled from "styled-components";
-// import * as Variables from "./styled-components/VariableStyle";
+import * as Variables from "./VariableStyle";
 
 // style of third page
 export const WrapVideo = styled.section `
@@ -16,7 +16,7 @@ export const WrapTourWatch = styled.div `
     display: flex;
     width: 100%;
     height: 20%;
-    background-color: rgba(255,255,255,0.5);
+    background-color: ${Variables.$white};
     @media (min-width: 320px) and (max-width: 768px) {
             
         }`;

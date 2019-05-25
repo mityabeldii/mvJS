@@ -1,6 +1,6 @@
 /*eslint-disable no-unused-vars*/
 import styled from "styled-components";
-// import * as Variables from "./styled-components/VariableStyle";
+import * as Variables from "./VariableStyle";
 
 // style of fourth page
 export const WrapContacts = styled.section`
@@ -32,7 +32,7 @@ export const FooterFirstLine = styled.div`
         position: relative;
         text-align: center;
         width: 100%;
-        color: #ffffff;
+        color: ${Variables.$white};;
         height: auto;
     };
     @media (min-width: 320px) and (max-width: 768px) {

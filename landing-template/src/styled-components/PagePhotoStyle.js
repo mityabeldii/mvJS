@@ -1,6 +1,6 @@
 /*eslint-disable no-unused-vars*/
 import styled from "styled-components";
-// import * as Variables from "./styled-components/VariableStyle";
+import * as Variables from "./VariableStyle";
 
 export const WrapLevelOne = styled.section`
     display: flex;
@@ -16,7 +16,7 @@ export const WrapLevelTwo = styled.div`
     width: ${props => props.widthStyle};
     height: auto;
     margin: 10px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: ${Variables.$white50};
     p {
         width: 100%;
         font-size: 3rem;

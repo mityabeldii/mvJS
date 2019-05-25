@@ -8,7 +8,8 @@ export const WrapPriceTable = styled.section `
     justify-content: flex-start;
     width: 90%;
     height: 90%;
-    border: 1px solid ${Variables._$white};
+    border: 1px solid ${Variables.$white};
+    margin-bottom: 50px;
     p {
         width: 100%;
         font-size: 2rem;

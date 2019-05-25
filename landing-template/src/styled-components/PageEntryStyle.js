@@ -1,8 +1,9 @@
 /*eslint-disable no-unused-vars*/
 import styled from "styled-components";
-// import * as Variables from "./styled-components/VariableStyle";
+import * as Variables from "./VariableStyle";
 
 export const EntryWrap = styled.div`
+    /* ${Variables.$flex_center}; */
     display: flex;
     width: 95%;
     height: 100%;
@@ -16,7 +17,7 @@ export const EntryBlock = styled.div`
     justify-content: space-between;
     width: 50%;
     height: 100%;
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid ${Variables.$white50};
     @media (min-width: 320px) and (max-width: 768px) {
             
         }`;
@@ -27,7 +28,7 @@ export const EntryLogo = styled.div`
     align-self: flex-start;
     width: 30%;
     height: 100px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: ${Variables.$white50};
     @media (min-width: 320px) and (max-width: 768px) {
             
         }`;
@@ -39,7 +40,7 @@ export const EntryCall = styled.div`
     margin-left: auto;
     width: 30%;
     height: 100px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: ${Variables.$white50};
     @media (min-width: 320px) and (max-width: 768px) {
             
         }`;
@@ -60,7 +61,7 @@ export const EntryExercise = styled.div`
     align-self: center;
     width: 100%;
     height: 70%;
-    background-color: rgba(255,255,255,0.35);
+    background-color: ${Variables.$white25};
     @media (min-width: 320px) and (max-width: 768px) {
             
         }`;
@@ -70,7 +71,7 @@ export const EntryKnowMore = styled.div`
     align-self: center;
     width: 100%;
     height: 30%;
-    background-color: rgba(255,255,255,0.5);
+    background-color: ${Variables.$white50};
     @media (min-width: 320px) and (max-width: 768px) {
             
         }`;

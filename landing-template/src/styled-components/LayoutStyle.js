@@ -1,5 +1,6 @@
 /*eslint-disable no-unused-vars*/
 import styled from "styled-components";
+import * as Variables from "./VariableStyle";
 
 export const Wrapper = styled.section`
     width: 100vw;
@@ -19,7 +20,7 @@ export const Header = styled.div`
     top: 0;
     transition: 0.2s;
     visibility: ${props => props.visible ? `visible`: `hidden`};
-    background-color: rgba(255,255,255,0.5);
+    background-color: ${Variables.$white};
         @media (min-width: 320px) and (max-width: 480px) {
             
         }`;
@@ -42,7 +43,7 @@ export const RectangleBlock = styled.section `
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: ${props => props.screenHeight};
     margin: 0;
     padding: 0;
     background-color: ${props => props.bgColorStyle};
