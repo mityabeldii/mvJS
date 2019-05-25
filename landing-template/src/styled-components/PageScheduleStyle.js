@@ -1,7 +1,6 @@
 /*eslint-disable no-unused-vars*/
 import styled from "styled-components";
 import * as Variables from "./VariableStyle";
-console.log(Variables)
 
 export const WrapScheduleTable = styled.section `
     display: flex;
@@ -31,7 +30,7 @@ export const ScheduleTableHead = styled.div `
 
 export const ScheduleTableHeadItem = styled.div `
     display: flex;
-    width: calc( 100% / 7 );
+    width: calc( 100% / 8 );
     border: 1px solid yellow;
     p {
         margin: 0.5rem;
